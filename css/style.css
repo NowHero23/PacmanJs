@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+}
+body{
+    /* background: #000; */
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+}
+
+.field{
+    border-collapse:separate;
+    position: relative;
+    width:  448px;
+    height:  496px;
+    background: rgba(0, 0, 0, 1);
+    z-index: -2;
+}
+.pacman{
+    position: absolute;
+    border: 3px solid;
+    border-image-slice: 1;
+
+    border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+
+.stats, .field{
+    position: relative;
+}
+p{
+    position: relative;
+    background: red;
+    color: rgb(0, 0, 0);
+    font-family: ArcadeR;
+    padding: 5px;
+}
+
+@font-face {
+    font-family: 'ArcadeR';
+    src: url('/font/arcade_r-webfont.woff2') format('woff2'),
+         url('/font/arcade_r-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
